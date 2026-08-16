@@ -109,6 +109,11 @@ pub struct LogAlertParams<'a> {
 }
 
 pub fn open_db(path: &str) -> Result<Connection> {
+    if let Some(parent) = std::path::Path::new(path).parent() {
+        if !parent.as_os_str().is_empty() {
+            let _ = std::fs::create_dir_all(parent);
+        }
+    }
     let conn = Connection::open(path)?;
     conn.execute_batch(
         "PRAGMA journal_mode = WAL;

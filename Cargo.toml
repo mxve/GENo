@@ -1,5 +1,5 @@
 [package]
-name = "ge-notifier"
+name = "GENo"
 version = "0.1.0"
 edition = "2024"
 
@@ -8,7 +8,7 @@ name = "ge_notifier"
 path = "src/lib.rs"
 
 [[bin]]
-name = "ge-notifier"
+name = "GENo"
 path = "src/main.rs"
 
 [dependencies]

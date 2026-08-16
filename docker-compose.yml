@@ -1,12 +1,12 @@
 services:
-  ge-notifier:
+  geno:
     build: .
     restart: unless-stopped
     ports:
       - "8080:8080"
     volumes:
       - ./config.toml:/app/config.toml:ro
-      - ge_data:/app/data
+      - ./ge_data:/app/data
     environment:
       - RUST_LOG=info
     healthcheck:
@@ -15,6 +15,3 @@ services:
       timeout: 5s
       retries: 3
       start_period: 10s
-
-volumes:
-  ge_data:

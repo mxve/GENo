@@ -55,11 +55,11 @@ fn default_interval_secs() -> u64 {
 }
 
 fn default_user_agent() -> String {
-    "ge-notifier/0.1 (github.com/mxve/ge-notifier)".to_string()
+    "GENo/0.1 (github.com/mxve/GENo)".to_string()
 }
 
 fn default_db_path() -> String {
-    "ge-notifier.db".to_string()
+    "GENo.db".to_string()
 }
 
 fn default_cooldown_secs() -> u64 {

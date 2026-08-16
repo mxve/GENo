@@ -17,8 +17,8 @@ RUN apk add --no-cache ca-certificates
 WORKDIR /app
 
 COPY --from=builder \
-    /build/target/x86_64-unknown-linux-musl/release/ge-notifier \
-    /app/ge-notifier
+    /build/target/x86_64-unknown-linux-musl/release/GENo \
+    /app/GENo
 
 # default config, user can mount their own
 COPY config.toml /app/config.toml
@@ -28,4 +28,4 @@ VOLUME ["/app/data"]
 
 EXPOSE 8080
 
-ENTRYPOINT ["/app/ge-notifier"]
+ENTRYPOINT ["/app/GENo"]
