@@ -1,0 +1,15 @@
+[server]
+host = "127.0.0.1"
+port = 8080
+
+[poller]
+interval_secs = 60
+user_agent = "ge-notifier/0.1 (github.com/mxve/ge-notifier)"
+
+
+
+[db]
+path = "ge-notifier.db"
+
+[notifications]
+default_cooldown_secs = 3600
